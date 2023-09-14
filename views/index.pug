@@ -4,10 +4,11 @@ block content
   h1= title
   p Welcome to #{title}
   each message in messages
-    ul 
+    ul(class='message-container') 
       li 
         p= 'User: ' + message.user
-      li 
+      li(class='msg-box') 
         p= 'Message: ' + message.text
       li
         p= 'Date: ' + message.added
+  a(href='/new') Create new message 
